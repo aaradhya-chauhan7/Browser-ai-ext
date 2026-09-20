@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemini Copilot Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-icon"></div>
+            <span>Gemini Copilot</span>
+        </div>
+        <div id="tab-info" class="tab-indicator">ID: --</div>
+    </header>
+
+    <div class="dropdown-bar">
+        <span style="color: var(--text-secondary);">Task:</span>
+        <select id="taskMode">
+            <option value="general">General Page Chat & Q&A</option>
+            <option value="solve">Solve Problem / Code Creator</option>
+            <option value="explain">Explain Page Code / Summary</option>
+            <option value="mcq">MCQ Solver (Auto-Answer & Click)</option>
+        </select>
+    </div>
+
+    <div id="chat-container"></div>
+
+    <!-- Standard Chat Input Bar -->
+    <div id="chatFooter" class="input-area">
+        <textarea id="userInput" placeholder="Ask Gemini about this tab..."></textarea>
+        <button id="sendBtn">SEND</button>
+    </div>
+
+    <!-- Automation Control Footer (Shown only on MCQ mode) -->
+    <div id="mcqFooter" class="automation-area hidden">
+        <button id="startAutoBtn">▶ START AUTO</button>
+        <button id="stopAutoBtn">⏹ STOP</button>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+</html>

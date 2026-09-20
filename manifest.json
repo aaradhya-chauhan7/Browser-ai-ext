@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Copilot - Chat & MCQ Assistant",
+  "version": "3.2",
+  "description": "Tab-aware AI chatbot assistant and MCQ automation solver powered by Gemini",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "action": {
+    "default_title": "Open Gemini Copilot"
+  }
+}
